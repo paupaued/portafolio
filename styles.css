@@ -1,84 +1,111 @@
+/* General */
 body {
     background-color: #000;
     color: #FFD700;
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 header {
-    background-color: #000;
+    background-color: #111;
     padding: 20px;
 }
 
 nav ul {
     list-style: none;
+    text-align: center;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: #FFD700;
     text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #fff;
+    color: #FFF;
 }
 
+/* Hero Section */
 .hero {
-    padding: 100px 20px;
-    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #111;
 }
 
-.hero:hover {
-    transform: scale(1.02);
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Portfolio Section */
 .portfolio {
     padding: 50px 20px;
+    text-align: center;
 }
 
 .proyectos-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .proyecto-card {
     background-color: #222;
-    border: 2px solid #FFD700;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
     padding: 20px;
-    width: 200px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    text-align: left;
+    color: #FFF;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .proyecto-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px #FFD700;
+    box-shadow: 0 0 15px #FFD700;
 }
 
+.proyecto-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.proyecto-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Contact Section */
 .contacto {
     padding: 50px 20px;
+    text-align: center;
 }
 
 form input, form textarea, form button {
-    display: block;
     width: 90%;
     max-width: 400px;
     margin: 10px auto;
     padding: 10px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
-    transition: box-shadow 0.3s ease-in-out;
+    display: block;
 }
 
 form input, form textarea {
@@ -87,7 +114,8 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-    box-shadow: 0px 0px 10px #FFD700;
+    outline: none;
+    box-shadow: 0 0 10px #FFD700;
 }
 
 form button {
@@ -95,29 +123,23 @@ form button {
     color: #000;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 form button:hover {
-    background-color: #fff;
+    background-color: #FFF;
     transform: scale(1.05);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
     nav ul li {
-        margin: 5px 0;
+        display: block;
+        margin: 10px 0;
     }
+
     .proyectos-grid {
         flex-direction: column;
         align-items: center;
-    }
-    .proyecto-card {
-        width: 90%;
-        max-width: 300px;
     }
 }
